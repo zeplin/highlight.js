@@ -2,5 +2,6 @@ machine:
   node:
     version: 8.9.3
 test:
-  pre:
+  override:
     - node tools/build.js -t node
+    - npm test
