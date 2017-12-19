@@ -98,7 +98,7 @@ function(hljs) {
       },
       {
         className: 'class',
-        beginKeywords: 'struct protocol class extension enum',
+        begin: /struct|protocol|extension|class(?!\s+(func|var|let))/,
         keywords: SWIFT_KEYWORDS,
         end: '\\{',
         excludeEnd: true,
