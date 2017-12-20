@@ -4,3 +4,9 @@ machine:
 test:
   pre:
     - node tools/build.js -t node
+deployment:
+  release:
+    tag: /[0-9]+(\.[0-9]+)*/
+    commands:
+      - node tools/build.js swift objectivec xml css scss less stylus javascript -t cdn
+      - ./deploy.sh
