@@ -25,7 +25,8 @@ function(hljs) {
                   begin: /\(/, end: /\)/,
                   contains: [
                     hljs.APOS_STRING_MODE,
-                    hljs.QUOTE_STRING_MODE
+                    hljs.QUOTE_STRING_MODE,
+                    hljs.CSS_NUMBER_MODE
                   ]
                 }
               ]

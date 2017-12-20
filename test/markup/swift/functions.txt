@@ -4,7 +4,10 @@ protocol Protocol {
 }
 
 class MyClass {
-  func f() {
+  class func f1() -> Bool {
+    return true
+  }
+  func f2() -> Bool {
     return true
   }
 }
