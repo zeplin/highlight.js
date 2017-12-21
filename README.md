@@ -1,11 +1,13 @@
 # Highlight.js
 
-[![Build Status](https://travis-ci.org/isagalaev/highlight.js.svg?branch=master)](https://travis-ci.org/isagalaev/highlight.js)
+![Build Status](https://circleci.com/gh/zeplin/highlight.js.svg?style=svg)
 
 Highlight.js is a syntax highlighter written in JavaScript. It works in
 the browser as well as on the server. It works with pretty much any
 markup, doesn’t depend on any framework and has automatic language
 detection.
+
+This [Highlight.js](https://github.com/isagalaev/highlight.js) fork is used within Zeplin clients, with minor updates to languages (Swift, Objective-C and CSS) and a new style.
 
 ## Getting Started
 
