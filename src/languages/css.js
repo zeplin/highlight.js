@@ -5,6 +5,12 @@ Category: common, css
 
 function(hljs) {
   var IDENT_RE = '[a-zA-Z-][a-zA-Z0-9_-]*';
+  var CSS_KEYWORDS = 'thin medium thick hidden dotted dashed solid double groove ridge' +
+    'inset outset to left right top bottom normal bold bolder lighter'
+  var HEX_COLOR_RULE = {
+    className: 'number',
+    begin: '#[0-9A-Fa-f]+'
+  }
   var RULE = {
     begin: /[A-Z\_\.\-]+\s*:/, returnBegin: true, end: ';', endsWithParent: true,
     contains: [
@@ -13,6 +19,7 @@ function(hljs) {
         begin: /\S/, end: ':', excludeEnd: true,
         starts: {
           endsWithParent: true, excludeEnd: true,
+          keywords: CSS_KEYWORDS,
           contains: [
             {
               begin: /[\w-]+\(/, returnBegin: true,
@@ -23,10 +30,12 @@ function(hljs) {
                 },
                 {
                   begin: /\(/, end: /\)/,
+                  keywords: CSS_KEYWORDS,
                   contains: [
                     hljs.APOS_STRING_MODE,
                     hljs.QUOTE_STRING_MODE,
-                    hljs.CSS_NUMBER_MODE
+                    hljs.CSS_NUMBER_MODE,
+                    HEX_COLOR_RULE
                   ]
                 }
               ]
@@ -35,9 +44,7 @@ function(hljs) {
             hljs.QUOTE_STRING_MODE,
             hljs.APOS_STRING_MODE,
             hljs.C_BLOCK_COMMENT_MODE,
-            {
-              className: 'number', begin: '#[0-9A-Fa-f]+'
-            },
+            HEX_COLOR_RULE,
             {
               className: 'meta', begin: '!important'
             }

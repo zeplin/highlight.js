@@ -1,0 +1,75 @@
+/*
+
+Zeplin theme
+
+https://zeplin.io
+
+base:    #474e5d
+mono-1:  #ffffff
+mono-2:  #bcb5b9
+hue-1:   #27f4ff
+hue-2:   #ff757d
+hue-3:   #c3ff5b
+hue-4:   #fecf33
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #ffffff;
+  background: #474e5d;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #bcb5b9;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula,
+.hljs-meta,
+.hljs-symbol,
+.hljs-section,
+.hljs-name,
+.hljs-deletion,
+.hljs-subst {
+  color: #ff757d;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-built_in,
+.hljs-type,
+.hljs-title,
+.hljs-literal {
+  color: #27f4ff;
+}
+
+.hljs-number,
+.hljs-regexp,
+.hljs-addition,
+.hljs-bullet,
+.hljs-link,
+.hljs-tag .hljs-string {
+  color: #c3ff5b;
+}
+
+.hljs-string,
+.hljs-meta-string,
+.hljs-tag,
+.hljs-tag .hljs-name,
+.hljs-selector-tag,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-selector-id {
+  color: #fecf33;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
